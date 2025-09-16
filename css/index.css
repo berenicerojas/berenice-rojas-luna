@@ -18,6 +18,31 @@ p {
   color: rgba(255, 255, 255, 0.88);
 }
 
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgb(58, 2, 188);
+}
+
+header ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none ;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: whitesmoke
+}
+
+/* header li{
+  padding-left: 10px;
+  padding-right: 10px;
+} */
+
+header a{
+  color: aliceblue;
+}
+
 section {
     margin-top: 65px;
     margin-bottom: 75px;
@@ -41,6 +66,14 @@ section {
 }
 
 #About {
+  background-color: #3445db;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow:#0b0d0e9a;
+}
+
+#About {
     text-align: center;
 }
 
@@ -51,12 +84,35 @@ section {
     margin-left: 80px;
 }
 
-#Experience ul{
-  list-style: none;
+#Experience{
+  background-color: #d3c6c6;
 }
 
-#Experience li{
-  display: grid;
+#Experience ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+#Experience li {
+  background-color: #b5acac;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow:#0b0d0e9a;
+}
+.experience-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.job{
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.job-description{
+  display: flex;
 }
 
 #Connect a {
@@ -67,7 +123,14 @@ section {
   margin-bottom: 10px; /* Space between links */
 }
 
+#Connect ul{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  list-style-type: none;
+}
+
 #Connect a:hover {
-  color: #2980b9; /* Darker blue on hover */
+  color: #6f29b9; /* Darker blue on hover */
   text-decoration: underline; /* Underline on hover */
 }
