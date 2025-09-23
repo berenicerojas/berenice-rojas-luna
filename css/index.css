@@ -1,15 +1,25 @@
+/*==========================*/
+/* Global*/
+/*==========================*/
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
 body {
   background-color: rgb(45, 73, 159);
   color: white;
   font-family: "Arimo", 'Courier New', Courier;
 }
+
 h1 {
-  color: maroon;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgb(132, 6, 6);
+  text-transform: uppercase;
+  margin-top: 3em;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 300;
   color: #ffffff;
 }
@@ -18,119 +28,137 @@ p {
   color: rgba(255, 255, 255, 0.88);
 }
 
+section {
+  margin: 4.063rem 5% 4.688rem; 
+  padding: 1.563rem 1.563rem 0.625rem 1.875rem;
+}
+
+/*==========================*/
+/* Header */
+/*==========================*/
 header {
   position: sticky;
   top: 0;
   background-color: rgb(58, 2, 188);
 }
 
-header ul{
-  display: flex;
-  justify-content: center;
-  list-style-type: none ;
-  gap: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: whitesmoke
+header ul {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+  list-style: none;
+  gap: 1rem;
+  padding: 1.25rem;
+  color: whitesmoke;
 }
-
-/* header li{
-  padding-left: 10px;
-  padding-right: 10px;
-} */
-
-header a{
+header a {
   color: aliceblue;
 }
 
-section {
-    margin-top: 65px;
-    margin-bottom: 75px;
-    margin-right: 75px;
-    margin-left: 10px;
-
-    padding-top: 25px;
-    padding-right: 25px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-}
-
-#About img{
-    margin-top: 2px;
-    margin-bottom: 7px;
-    margin-right: 10px;
-    margin-left: 10px;
-    max-width: 150px;
-    border-radius: 10%;
-    border: 4px solid #3498db;
-}
-
+/*==========================*/
+/* About Section */
+/*==========================*/
 #About {
   background-color: #3445db;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow:#0b0d0e9a;
+  padding: 1.25rem;
+  margin-bottom: 0.938rem;
+  border-radius: 0.5rem;
+  box-shadow: #0b0d0e9a;
+  text-align: center;
 }
 
-#About {
-    text-align: center;
+#About img {
+  margin: 0.125rem 0.625rem 0.438rem; 
+  max-width: 9.375rem;
+  border-radius: 10%;
+  border: 0.25rem solid #3498db;
 }
 
-#Experience{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-}
-
-#Experience{
+/*==========================*/
+/* Experience Section */
+/*==========================*/
+#Experience {
   background-color: #d3c6c6;
+  margin: 6.25rem 5% 6.25rem;
 }
 
-#Experience ul{
+#Experience ul {
   list-style-type: none;
   padding: 0;
 }
 
 #Experience li {
   background-color: #b5acac;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow:#0b0d0e9a;
-}
-.experience-list{
-  display: flex;
-  flex-direction: column;
+  padding: 1.25rem;
+  margin-bottom: 0.938rem;
+  border-radius: 0.5rem;
+  box-shadow: #0b0d0e9a;
 }
 
-.job{
-  display: flex;
-  align-items: start;
-  gap: 10px;
+.experience-list {
+  display: grid;
 }
 
-.job-description{
-  display: flex;
+.job {
+  display: grid;
+  align-items: center;
+  gap: 0.625rem;
 }
 
+.job-description {
+  display: grid;
+}
+
+#Projects li{
+  list-style: none;
+  margin: 10%;
+  place-content: start;
+}
+
+/*==========================*/
+/* Connect Section */
+/*==========================*/
 #Connect a {
-  color: #3498db; /* Blue links */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Bold text */
-  display: inline-block; /* Make them block level for spacing */
-  margin-bottom: 10px; /* Space between links */
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.625rem;
 }
 
-#Connect ul{
-  display: flex;
-  justify-content: space-evenly;
+#Connect ul {
+  display: grid;
   padding: 0;
   list-style-type: none;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 #Connect a:hover {
-  color: #6f29b9; /* Darker blue on hover */
-  text-decoration: underline; /* Underline on hover */
+  color: #6f29b9;
+  text-decoration: underline;
+}
+
+/*==========================*/
+/* Tablet */
+/*==========================*/
+@media (min-width: 760px) {
+  header ul {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+}
+
+/*==========================*/
+/* Desktop */
+/*==========================*/
+@media(min-width: 1024px) {
+  h1 {
+    font-size: 4em;
+    margin-top: 3.5rem;
+  }
+  #Connect ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.25rem;
+    justify-content: center;
+  }
 }
