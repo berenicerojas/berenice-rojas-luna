@@ -116,6 +116,35 @@ header a {
 }
 
 /*==========================*/
+/* Skills Section */
+/*==========================*/
+
+#Skills{
+  background-color: #3445db;
+  padding: 1.25rem;
+  border-radius: .5rem;
+}
+
+#Skills ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+}
+
+#Skills li{
+  background-color: #ffffff;
+  color: #3445db;
+  padding: .5rem 1rem;
+  border-radius: 1.5rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/*==========================*/
 /* Connect Section */
 /*==========================*/
 #Connect a {
@@ -144,7 +173,11 @@ header a {
 @media (min-width: 760px) {
   header ul {
     grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
+    gap: 2rem; 
+  }
+
+  #Skills ul{
+    justify-content: flex-start;
   }
 }
 
