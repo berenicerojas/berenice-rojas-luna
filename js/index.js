@@ -2,7 +2,6 @@
 const body = document.body;
 
 // -------------------- FOOTER --------------------
-
 // Creating footer
 const footer = document.createElement('footer');
 // Append footer to body
