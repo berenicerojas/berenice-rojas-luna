@@ -28,7 +28,7 @@ for (let i = 0; i < skills.length; i++) {
 }
 //----------------- Message form ------------------------
 // select the leave_message form by name 
-const messageForm = document.querySelector("#leave_messages");
+const messageForm = document.querySelector("leave_message");
 
 // add event listener to handle "submit"
 messageForm.addEventListener("submit", function(event) {
@@ -53,7 +53,7 @@ messageForm.addEventListener("submit", function(event) {
     //Create a new list item
     const newMessage = document.createElement("li");
     // Set the inner HTML
-    newMessage.innerHTML = `<a href="mailto:${userName}"> ${userName} </a>: <span>${userMessage}</span>`; 
+    newMessage.innerHTML = `<a href="mailto:${userEmail}"> ${userName} </a>: <span>${userMessage}</span>`; 
 
     //create an edit button
     const editButton = document.createElement("button");
