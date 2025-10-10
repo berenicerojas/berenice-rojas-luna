@@ -109,10 +109,72 @@ header a {
   display: grid;
 }
 
+
+/*==========================*/
+/* Projects Section */
+/*==========================*/
+
+
+/**Styling my projects section--*/
+#Projects{
+  padding: 1.25rem 0;
+}
+
+#Projects h2{
+  text-align: center;
+  margin-bottom: 1.875rem;
+  font-size: 1.8em;
+  color: #333;
+}
+
 #Projects li{
   list-style: none;
   margin: 10%;
   place-content: start;
+}
+
+/**Flexbox**/
+#Projects ul{
+  list-style: none;
+  padding: 0;
+  max-width: 62.5rem;
+  justify-content: center;
+}
+
+#Projects ul li{
+  background-color: #61aace9a;
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+  padding: .9375rem;
+  box-shadow: 0 .25rem .5rem rgba(0,0,0,0.1);
+
+  width: 18.75rem;
+  flex-grow: 1;
+  min-width: 15.625rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#Projects ul li a{
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+#Projects ul li:hover{
+  background-color: #e9ecef;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+#Projects ul li a:hover{
+  color: #0056b3;
 }
 
 /*==========================*/
@@ -170,10 +232,19 @@ header a {
 /*==========================*/
 /* Tablet */
 /*==========================*/
-@media (min-width: 760px) {
+@media (min-width: 768px) {
   header ul {
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem; 
+  }
+
+  #Projects ul{
+    padding: 0 0.625rem;
+  }
+
+  #Projects ul li{
+    width: 45%;
+    min-width: 9.375rem;
   }
 
   #Skills ul{
@@ -189,6 +260,13 @@ header a {
     font-size: 4em;
     margin-top: 3.5rem;
   }
+  
+  #Projects ul li{
+    width: 100%;
+    flex-basis: auto;
+    margin-bottom: .625rem;
+  }
+
   #Connect ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.25rem;
