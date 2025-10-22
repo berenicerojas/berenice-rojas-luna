@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 
 body {
+  margin: 0;
   background-color: rgb(45, 73, 159);
   color: white;
   font-family: "Arimo", 'Courier New', Courier;
@@ -43,14 +44,15 @@ header {
 }
 
 header ul {
-  display: grid;
-  place-content: center;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
   list-style: none;
-  gap: 1rem;
-  padding: 1.25rem;
+  gap: .3rem;
   color: whitesmoke;
+  flex-wrap: wrap;
 }
+
 header a {
   color: aliceblue;
 }
@@ -78,7 +80,7 @@ header a {
 /* Experience Section */
 /*==========================*/
 #Experience {
-  background-color: #d3c6c6;
+  background-color: #33337a;
   margin: 6.25rem 5% 6.25rem;
 }
 
@@ -88,7 +90,7 @@ header a {
 }
 
 #Experience li {
-  background-color: #b5acac;
+  background-color: #33337a;
   padding: 1.25rem;
   margin-bottom: 0.938rem;
   border-radius: 0.5rem;
@@ -124,12 +126,12 @@ header a {
   text-align: center;
   margin-bottom: 1.875rem;
   font-size: 1.8em;
-  color: #333;
+  color: #efefef;
 }
 
 #Projects li{
   list-style: none;
-  margin: 10%;
+  margin: 3%;
   place-content: start;
 }
 
@@ -138,11 +140,13 @@ header a {
   list-style: none;
   padding: 0;
   max-width: 62.5rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 #Projects ul li{
-  background-color: #61aace9a;
+  background-color: #0f7eb59a;
   border: 1px solid #ddd;
   border-radius: .5rem;
   padding: .9375rem;
@@ -151,30 +155,25 @@ header a {
   width: 18.75rem;
   flex-grow: 1;
   min-width: 15.625rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 #Projects ul li a{
   text-decoration: none;
-  color: #3498db;
+  color: #eff2f5;
   font-weight: bold;
   font-size: 1.1em;
   transition: color 0.3s ease;
 }
 
 #Projects ul li:hover{
-  background-color: #e9ecef;
+  background-color: #0a549f;
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
 
 #Projects ul li a:hover{
-  color: #0056b3;
+  color: #cfd2d6;
 }
 
 /*==========================*/
@@ -229,13 +228,31 @@ header a {
   text-decoration: underline;
 }
 
+#Messages ul li{
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  padding: .625rem;
+  border: .625rem solid #ddd;
+  margin-bottom: .625rem;
+}
+
+#Messages ul li span{
+  flex-grow: 1;
+}
+
+#Messages ul li button{
+  flex-shrink: 0;
+  padding: .3125rem .625rem;
+}
 /*==========================*/
 /* Tablet */
 /*==========================*/
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   header ul {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem; 
+    /* grid-template-columns: repeat(5, 1fr); */
+    justify-content: space-between;
+    gap: .25rem; 
   }
 
   #Projects ul{
@@ -243,8 +260,8 @@ header a {
   }
 
   #Projects ul li{
-    width: 45%;
-    min-width: 9.375rem;
+    width: 100%;
+    min-width: .5rem 0;
   }
 
   #Skills ul{
@@ -259,6 +276,15 @@ header a {
   h1 {
     font-size: 4em;
     margin-top: 3.5rem;
+  }
+
+  header ul li a{
+    padding: 1rem .5rem;
+    display: block;
+  } 
+
+  header ul{
+    align-items: center;
   }
   
   #Projects ul li{
