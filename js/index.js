@@ -17,7 +17,7 @@ footer.appendChild(copyright);
 
 // -------------------- Skills --------------------
 
-const skills = ["JavaScript", "HTML", "CSS", "Adobe Photoshop", "GitHub"];
+const skills = ["JavaScript", "HTML", "CSS", "Adobe Photoshop", "GitHub","Python","Tableau","Excel"];
 const skillsSection = document.querySelector("#Skills");
 const skillsList = skillsSection.querySelector("ul");
 
@@ -95,6 +95,16 @@ messageForm.addEventListener("submit", function (event) {
   messageForm.reset();
 });
 
+function toggleMessageSection(){
+  const messageSection = document.getElementById("Messages");
+  const messageList = messageSection.querySelector("ul");
+
+  if (messageList.children.length === 0){
+    console.log("No messages to display. Section could be Hidden");
+  } else{
+    console.log("Messages found. Section should be visible");
+  }
+}
 //----Fetching the API -------
 
 fetch("https://api.github.com/users/berenicerojas/repos")
